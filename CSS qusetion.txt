@@ -1,0 +1,68 @@
+1-how to add comments on css?
+ans-To comment in CSS, simply place your plain text inside /* */ marks. This tells the browser that they are notes and should not be rendered on the front end.
+
+2-Why do we use pseudo-class?
+ans-CSS pseudo-classes are used to add special effects to some selectors.
+
+selector:pseudo-class {
+  property: value;
+}
+example:
+
+div:hover {
+  background-color: blue;
+}
+
+3-How is specificity applied?
+ans-If there are two or more CSS rules that point to the same element, the selector with the highest specificity value will "win", and its style declaration will be applied to that HTML element.
+
+ Selector                                | Thousands | Hundreds | Tens | Ones | Total |
+| --------------------------------------- | --------- | -------- | ---- | ---- | ----- |
+| h1                                      | 0         | 0        | 0    | 1    | 0001  |
+| h1 + p                                  | 0         | 0        | 0    | 2    | 0002  |
+| h1 + p::first-letter                    | 0         | 0        | 0    | 3    | 0003  |
+| li > a[href*="en-US"] > .inline-warning | 0         | 0        | 2    | 2    | 0022  |
+| .class1                                 | 0         | 0        | 1    | 0    | 0010  |
+| ul.class1                               | 0         | 0        | 1    | 1    | 0011  |
+| #id1                                    | 0         | 1        | 0    | 0    | 0100  |
+| style                                   | 1         | 0        | 0    | 0    | 1000  |
+
+4-What method allows an element to be moved from its current position?
+ans-The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis).
+
+5-What properties does flex model have?
+ans-
+
+6-What is the difference between flex and grids?
+ans-Grid is made for two-dimensional layout while Flexbox is for one. This means Flexbox can work on either row or columns at a time, but Grids can work on both.
+Major Uniqueness between Flexbox and Grids is that the former works on content while the latter is based on the layout.
+CSS Grids helps you create the outer layout of the webpage. You can build complex as well responsive design with this. This is why it is called ‘layout first’. Flexbox mostly helps align content & move blocks.
+
+7-Give an example where we have to use grids and where you have to use flexbox?
+ans-Grid is made for two-dimensional layout while Flexbox is for one. This means Flexbox can work on either row or columns at a time, but Grids can work on both.
+
+Major Uniqueness between Flexbox and Grids is that the former works on content while the latter is based on the layout.
+
+CSS Grids helps you create the outer layout of the webpage. You can build complex as well responsive design with this. This is why it is called ‘layout first’. Flexbox mostly helps align content & move blocks.
+
+Give an example where we have to use grids and where you have to use flexbox?
+CSS Grids helps you create the outer layout of the webpage. You can build complex as well responsive design with this. This is why it is called ‘layout first’. While flexbox mostly helps align content & move blocks.
+
+CSS grids are for 2D layouts. It works with both rows and columns.Flexbox works better in one dimension only (either rows OR columns).
+
+You should consider flexbox when :
+
+You have a small design to implement
+You need to align elements
+You need a content-first design
+You should consider CSS grid when :
+
+You have a complex design to implement
+You need to have a gap between block elements
+You need to overlap elements
+You need a layout-first design
+In simple terms
+"CSS grid is for layout, Flexbox is for alignment"
+
+8-Give an example where you cannot use flexbox, and you can only use grids?
+
