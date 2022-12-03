@@ -65,4 +65,63 @@ In simple terms
 "CSS grid is for layout, Flexbox is for alignment"
 
 8-Give an example where you cannot use flexbox, and you can only use grids?
+ans-If you have some complex layout as this wherein you want to layout in different ways basis the screen size; You'd rather use CSS grid over flex;
+
+for a simple one dimensional layout flexbox can be useful to help align content
+
+9-What are combinators? give examples of how you can use them?
+ans-
+
+10-What does object-fit do?
+ans-The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.
+
+ans-This property tells the content to fill the container in a variety of ways; such as "preserve that aspect ratio" or "stretch up and take up as much space as possible".
+
+11-What does rotate do?
+The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.
+
+12-What rule can be used to define animations
+ans-The @keyframes rule specifies the animation code.
+
+The animation is created by gradually changing from one set of CSS styles to another.
+
+During the animation, you can change the set of CSS styles many times.
+
+Specify when the style change will happen in percent, or with the keywords "from" and "to", which is the same as 0% and 100%. 0% is the beginning of the animation, 100% is when the animation is complete.
+
+@keyframes animationname {keyframes-selector {css-styles;}}
+
+13-When working with attribute selectors, how can you select elements which contain a particular attribute value?
+ans-a[href*="en-US"] // selects an `a` tag which a particular href attribute value that has been asked
+
+14-What does @media do?
+ans-The @media rule is used in media queries to apply different styles for different media types/devices.
+
+Media queries can be used to check many things, such as:
+
+width and height of the viewport
+width and height of the device
+orientation (is the tablet/phone in landscape or portrait mode?)
+resolution
+Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones.
+
+You can also use media queries to specify that certain styles are only for printed documents or for screen readers (mediatype: print, screen, or speech).
+
+In addition to media types, there are also media features. Media features provide more specific details to media queries, by allowing to test for a specific feature of the user agent or display device. For example, you can apply styles to only those screens that are greater, or smaller, than a certain width.
+
+body {
+  background-color: lightblue;
+}
+
+@media screen and (min-width: 400px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: lavender;
+  }
+}
 
