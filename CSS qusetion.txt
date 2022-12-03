@@ -125,3 +125,44 @@ body {
   }
 }
 
+15-What can be used to override properties of an element
+To override the CSS properties of a class using another class, we can use the !important directive. In CSS, !important means “this is important”, and the property:value pair that has this directive is always applied even if the other element has higher specificity.
+Syntax :
+
+element1 {
+    property-x: value_y  !important; /* This will be applied. */
+}
+element2 {
+    property-x: value_z; /* This will not be applied. */
+}
+
+16-How can you select every alternate elements in a list of elements using css?
+ans-ul{
+  list-style-type: none;
+  color: white;
+}
+li:nth-of-type(odd){ // or you can also use li:nth-child(odd)
+  background-color:blue;
+}
+li:nth-of-type(even){
+  background-color:red;
+}
+
+17-What is the ranking of selectors with respect to specificity
+Ranking from Low To High
+
+ans-universal_selector, combinators selector, negation pseudo-class (:not) selector ( these selectors have no effects on specificity )
+element selector, pseudo element selector
+class selector, attribute selector, pseudo-class contained inside the overall selector
+id selector
+inline styling
+
+18-How can we apply same styles to multiple selectors?
+ans-To group CSS selectors in a style sheet, use commas to separate multiple grouped selectors in the style. In this example, the style affects the p and div elements:
+div, p { color: #f00; }
+
+19-What are the differences between relative and absolute in CSS?
+Relative	                                                                                                               Absolute
+An element with position: relative; is positioned relative to its normal position.                               	      An element with position: absolute; is positioned relative to the nearest positioned ancestor. However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+Setting the top, right, bottom, and
+ left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.           Other content will not be adjusted to fit into any gap left by the element.
