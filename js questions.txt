@@ -1,0 +1,33 @@
+1-Give an example where call apply bind is. required?
+ans-
+Traditionally in JavaScript, you can have objects that have their own properties and methods. For example, object1 cannot use the methods of object2 and vice versa.
+But there’s a way to overcome this restriction.
+
+You can use call(), apply(), and bind() methods to tie a function into an object and call the function as if it belonged to that object.
+
+Let’s go through these three methods one by one and see some use-cases as well.
+
+Call() Method in JavaScript
+The call() method invokes a function with a specified context. In other words, you can tie a function into an object as if it belonged to the object.
+
+Example
+Let’s create an object obj and a function add() for adding up a number with another:
+
+var obj = { num: 2 };
+function add(a){
+  return this.num + a;
+}
+Now, there’s a problem with add(). It’s trying to return this.num + some value. But there is no property num inside the function. Thus calling this.num fails.
+
+But as you can see, the object obj has a property num. What if you could call the function add() on that object as if it belonged to the object?
+
+This is indeed possible. To do this, use the call() method to tie the function add() momentarily to the object obj
+
+Apply() Method in JavaScript
+The apply() method does the exact same as call(). The difference is that call() accepts an argument list, but apply() accepts an array of arguments.
+
+The bind function creates a copy of a function with a new value to the this present inside the calling function.
+
+2-What is the difference between readFile and readFileSync?
+ans-readFileSync() method is an inbuilt application programming interface of fs module which is used to read the file and return its content.
+ In fs. readFile() method, we can read a file in a non-blocking asynchronous way, but in fs. readFileSync() method, we can read files in a synchronous way, i.e. we are telling node.
