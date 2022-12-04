@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="toggle()" id="btn">Click me !!</button>
+</body>
+</html>
+<script>
+    // example code
+
+function toggler(one,two,three) {
+    let count=1;
+  return function fn(){
+    if(count==1){
+        console.log(one);
+    }else if(count==2){
+        console.log(two);
+    }else if(count==3){
+        console.log(three);
+    }else{
+        count=0;
+    }
+    count++;
+  }
+}
+
+const toggle = toggler(1,2,3)
+
+// toggle()
+// // 1
+// toggle()
+// // 2
+// toggle()
+// // 3
+</script>
