@@ -18,14 +18,16 @@ function toggler(one,two,three) {
   return function fn(){
     if(count==1){
         console.log(one);
+        count++;
     }else if(count==2){
         console.log(two);
+        count++;
     }else if(count==3){
         console.log(three);
+        count++;
     }else{
         count=1;
     }
-    count++;
   }
 }
 
